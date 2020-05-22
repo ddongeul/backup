@@ -11,12 +11,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".InsertPostActivity"></activity>
-        <activity android:name=".VerificationAcitvity" />
-        <activity android:name=".ModificationActivity"/>
-        <activity android:name=".HttpRequest" />
-        <activity android:name=".JoinActivity" />
-        <activity android:name=".MyPageActivity" />
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".HttpRequest" />
+        <activity android:name=".VerificationAcitvity" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".PrivacyActivity"/>
+        <activity android:name=".RecommendationActivity"/>
+        <activity android:name=".FriendActivity"/>
+        <activity android:name=".NoticeActivity"/>
+        <activity android:name=".UniversityTextActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

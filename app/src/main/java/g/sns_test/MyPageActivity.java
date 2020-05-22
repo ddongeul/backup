@@ -1,44 +1,112 @@
 package g.sns_test;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MyPageActivity extends AppCompatActivity {
     String TAG = "MyPageActivity";
 
-    private ArrayList<MyPageData> arrayList;
-    private MyPageAdapter mypageadapter;
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutmanager;
+    private TextView privacy;
+    private TextView recommendation;
+    private TextView friend;
+    private TextView notice;
+
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
         Log.d(TAG, "MypageActivity 호출");
 
-        recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
-        layoutmanager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutmanager);
-        recyclerView.setHasFixedSize(true);
 
-        arrayList = new ArrayList<>();
-        arrayList.add(new MyPageData("개인정보 수정"));
-        arrayList.add(new MyPageData("동아리 추천"));
-        arrayList.add(new MyPageData("친구"));
-        arrayList.add(new MyPageData("설정"));
+        privacy = (TextView)findViewById((R.id.textView5));
+        recommendation = (TextView)findViewById((R.id.textView6));
+        friend = (TextView)findViewById((R.id.textView7));
+        notice = (TextView)findViewById((R.id.textView8));
 
 
+        privacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        mypageadapter = new MyPageAdapter(this, arrayList);
-       recyclerView.setAdapter(mypageadapter);
+                Intent intent = new Intent(getApplicationContext(),PrivacyActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        recommendation.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),RecommendationActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        friend.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getApplicationContext(),FriendActivity.class);
+               startActivity(intent);
+
+           }
+       });
+
+
+        notice.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),NoticeActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
+
+//        public void View()
+//        {
+//            privacy = (TextView)findViewById((R.id.textView5));
+//            recommendation = (TextView)findViewById((R.id.textView6));
+//            friend = (TextView)findViewById((R.id.textView7));
+//            notice = (TextView)findViewById((R.id.textView8));
+//
+//        }
+//
+//        public void SetListener(){
+//
+//        View.OnClickListener Listener = new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                switch (View.getId()) {
+//                    case R.id.textView5:
+//                        Intent intent = new Intent(getApplicationContext(), PrivacyActivity.class);
+//                        startActivity(intent);
+//
+//                        break;
+//                    case R.id.textView6:
+//                        break;
+//                    case R.id.textView7:
+//                        break;
+//                    case R.id.textView8:
+//                        break;
+//
+//
+//                }
+//            }
+//        }
+//  }
+
 }
 
 
