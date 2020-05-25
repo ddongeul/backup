@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
 
         //왼쪽 상단 메뉴
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
 
         // 검색문 쿼리 수신하기
         Intent intent = getIntent();
@@ -80,12 +80,7 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
         //버튼이 클릭된 경우 openDrawer()메소드를 이용하고 매개변수로 GravityCompat.START를 넘긴다
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-//        mypagefragment = mypagefragment.newInstance();
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.drawer_layout,mypagefragment).commit();
+        //toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
