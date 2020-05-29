@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:background="#000000"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:titleTextColor="@color/white" />
 
         <com.google.android.material.tabs.TabLayout
@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="center"
+            app:tabIndicatorColor="@color/tedbottompicker_camera"
             app:tabMode="scrollable" />
 
         <androidx.viewpager.widget.ViewPager

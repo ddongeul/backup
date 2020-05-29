@@ -3,6 +3,7 @@ package g.sns_test;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,22 +12,24 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.SearchView.OnQueryTextListener;
+
+
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.MenuItemCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity implements OnQueryTextListener {
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
     private String TAG = "MainActivity";
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -35,14 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
 
     AllthingsFragment allthingsfragment;
     ListFragment listfragment;
-//    MyPageFragment mypagefragment;
 
-//    DrawerLayout drawerLayout;
-//    ListView listView;
-//    ArrayAdapter<String> adapterDrawerList;
-//    String[] menuItems = new String[] {"MyPageFragment"};
-
-    // public static TabHost tabHost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
 
         allthingsfragment = new AllthingsFragment();
         listfragment = new ListFragment();
-       // insertpost = new InsertPostActivity();
 
         //툴바 ->액션바
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
@@ -80,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
         //버튼이 클릭된 경우 openDrawer()메소드를 이용하고 매개변수로 GravityCompat.START를 넘긴다
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(toggle);
-        //toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -174,42 +168,51 @@ public class MainActivity extends AppCompatActivity implements OnQueryTextListen
         menuInflater.inflate(R.menu.menu, menu);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2){
-            SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+            SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
             searchView.setMaxWidth(Integer.MAX_VALUE);
             searchView.setQueryHint("검색해주세요");
 
+            SearchView.SearchAutoComplete searchAutoComplete = (SearchView.SearchAutoComplete)searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+            searchAutoComplete.setHintTextColor(Color.WHITE);
+            searchAutoComplete.setTextColor(Color.WHITE);
+
             // 쿼리를 구현할 리스너
             searchView.setOnQueryTextListener(this);
+
             SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
             if (null != searchManager) {
                 searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
             }
             //추천 검색어의 쿼리 조정
-            searchView.setQueryRefinementEnabled(true);
+        //    searchView.setQueryRefinementEnabled(true);
             //검색버튼 누르면 펼치기
-            searchView.setIconifiedByDefault(true);
+//            searchView.setIconifiedByDefault(true);
+//            searchView.setIconified(false);
+
+
 ////처리 로직 구현 코드 나중에 붙이기 (데베 연결)
-    }
+}
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d("test2","onOptionsItemSelected 호출");
+        public boolean onOptionsItemSelected(MenuItem item) {
+            Log.d("test2","onOptionsItemSelected 호출");
 
-        switch (item.getItemId()) {
+            switch (item.getItemId()) {
 
-            case R.id.action_search:
-                return true;
+                case R.id.action_search:
+                    return true;
 
-            case R.id.home:
-            {
-                Toast.makeText(context,  "네비게이션 열림을 확인합니다.",Toast.LENGTH_SHORT).show();
-                return true;
+                case R.id.home:
+                {
+                    Toast.makeText(context,  "네비게이션 열림을 확인합니다.",Toast.LENGTH_SHORT).show();
+                    return true;
+                }
             }
-        }
-        return super.onOptionsItemSelected(item);
+            return super.onOptionsItemSelected(item);
     }
+
     @Override
     public boolean onQueryTextChange(String s) {
         // Toast.makeText(getApplicationContext(),"입력중입니다.",Toast.LENGTH_SHORT).show();
