@@ -20,7 +20,8 @@
         <activity android:name=".RecommendationActivity"/>
         <activity android:name=".FriendActivity"/>
         <activity android:name=".NoticeActivity"/>
-        <activity android:name=".UniversityTextActivity"/>
+        <activity android:name=".FirstActivity"/>
+        <activity android:name=".UniversityCrewActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
