@@ -25,8 +25,8 @@ public class FirstAdapter extends RecyclerView.Adapter<g.sns_test.FirstAdapter.M
 
     final static String TAG = "FirstAdapter";
 
-    private ArrayList<String> nTextViews = new ArrayList<>();
-    private ArrayList<String> nImageViews = new ArrayList<>();
+    private ArrayList<String> nTextViews;
+    private ArrayList<String> nImageViews;
     private Context nContext;
 
 
@@ -78,7 +78,6 @@ public class FirstAdapter extends RecyclerView.Adapter<g.sns_test.FirstAdapter.M
                         intent.putExtra("cr_introduce",cr_introduce);
                         intent.putExtra("cr_work",cr_work);
 
-
 //                        String cr_name5 = "동아리명 : 슈퍼스타" ;
 //                        String cr_location5="장소";
 //                        String cr_introduce5="소개";
@@ -95,8 +94,8 @@ public class FirstAdapter extends RecyclerView.Adapter<g.sns_test.FirstAdapter.M
 
                         String cr_name1 = "동아리명 : 슈퍼스타";
                         String cr_location1="장소";
-                        String cr_introduce1="소개";
                         String cr_work1="활동";
+                        String cr_introduce1="소개";
 
                         intent.putExtra("cr_name",cr_name1);
                         intent.putExtra("cr_location",cr_location1);
@@ -104,18 +103,59 @@ public class FirstAdapter extends RecyclerView.Adapter<g.sns_test.FirstAdapter.M
                         intent.putExtra("cr_work",cr_work1);
                         break;
 
+                    case 2:
+                    intent =  new Intent(nContext, UniversityCrewActivity.class);
+                    String cr_name2 = "동아리명 : perfect";
+                    String cr_location2="장소";
+                    String cr_introduce2="소개";
+                    String cr_work2="활동";
+
+                    intent.putExtra("cr_name",cr_name2);
+                    intent.putExtra("cr_location",cr_location2);
+                    intent.putExtra("cr_introduce",cr_introduce2);
+                    intent.putExtra("cr_work",cr_work2);
+                    break;
+
+                    case 3:
+                    intent =  new Intent(nContext, UniversityCrewActivity.class);
+                    String cr_name3 = "동아리명 : perfect";
+                    String cr_location3="장소";
+                    String cr_introduce3="소개";
+                    String cr_work3="활동";
+
+                    intent.putExtra("cr_name",cr_name3);
+                    intent.putExtra("cr_location",cr_location3);
+                    intent.putExtra("cr_introduce",cr_introduce3);
+                    intent.putExtra("cr_work",cr_work3);
+                    break;
+
+                    case 4:
+                    intent =  new Intent(nContext, UniversityCrewActivity.class);
+                    String cr_name4 = "동아리명 : perfect";
+                    String cr_location4="장소";
+                    String cr_introduce4="소개";
+                    String cr_work4="활동";
+
+                    intent.putExtra("cr_name",cr_name4);
+                    intent.putExtra("cr_location",cr_location4);
+                    intent.putExtra("cr_introduce",cr_introduce4);
+                    intent.putExtra("cr_work",cr_work4);
+                    break;
+
                     default:
                         intent =  new Intent(nContext, UniversityCrewActivity.class);
-                        String cr_name2 = "동아리명 : perfect";
-                        String cr_location2="장소";
-                        String cr_introduce2="소개";
-                        String cr_work2="활동";
+                        String cr_name5 = "동아리명 : perfect";
+                        String cr_location5="장소";
+                        String cr_introduce5="소개";
+                        String cr_work5="활동";
 
-                        intent.putExtra("cr_name",cr_name2);
-                        intent.putExtra("cr_location",cr_location2);
-                        intent.putExtra("cr_introduce",cr_introduce2);
-                        intent.putExtra("cr_work",cr_work2);
+                        intent.putExtra("cr_name",cr_name5);
+                        intent.putExtra("cr_location",cr_location5);
+                        intent.putExtra("cr_introduce",cr_introduce5);
+                        intent.putExtra("cr_work",cr_work5);
                         break;
+
+
                 }
 
                 intent.putExtra("image_names",nTextViews.get(position));
@@ -134,7 +174,6 @@ public class FirstAdapter extends RecyclerView.Adapter<g.sns_test.FirstAdapter.M
 //                return true;
 //            }
 //        });
-
     }
 
     @Override

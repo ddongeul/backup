@@ -81,7 +81,9 @@ public class FirstActivity extends AppCompatActivity {
 //            nNames.setVisibility(View.VISIBLE);
 //
 //        }
-
+//        if(getAdapterposition == 0){
+//
+//        }
         String cr_name = intent.getStringExtra("cr_name");
         String cr_img =intent.getStringExtra("cr_img");
         nImageUrls.add(cr_img);
@@ -96,6 +98,21 @@ public class FirstActivity extends AppCompatActivity {
         String cr_img2 =intent.getStringExtra("cr_img2");
         nImageUrls.add(cr_img2);
         nNames.add(cr_name2);
+
+//        String cr_nameA = intent.getStringExtra("cr_nameA");
+//        String cr_imgA =intent.getStringExtra("cr_imgA");
+//        nImageUrls.add(cr_imgA);
+//        nNames.add(cr_nameA);
+//
+//        String cr_nameA1 = intent.getStringExtra("cr_nameA1");
+//        String cr_imgA1 =intent.getStringExtra("cr_imgA1");
+//        nImageUrls.add(cr_imgA1);
+//        nNames.add(cr_nameA1);
+//
+//        String cr_nameA2 = intent.getStringExtra("cr_nameA2");
+//        String cr_imgA2 =intent.getStringExtra("cr_imgA2");
+//        nImageUrls.add(cr_imgA2);
+//        nNames.add(cr_nameA2);
 
     }
 

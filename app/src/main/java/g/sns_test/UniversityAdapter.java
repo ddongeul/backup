@@ -21,8 +21,8 @@ public class UniversityAdapter extends RecyclerView.Adapter<g.sns_test.Universit
 
     final static String TAG = "University";
 
-    private ArrayList<String> mTextViews = new ArrayList<>();
-    private ArrayList<String> mImageViews = new ArrayList<>();
+    private ArrayList<String> mTextViews;
+    private ArrayList<String> mImageViews;
     private Context mContext;
 
 
@@ -44,7 +44,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<g.sns_test.Universit
     }
 
     @Override
-    public void onBindViewHolder(UniversityAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(UniversityAdapter.MyViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder 호출");
 
         Glide.with(mContext)
@@ -181,6 +181,5 @@ public class UniversityAdapter extends RecyclerView.Adapter<g.sns_test.Universit
         }
 
     }
-
 
 }

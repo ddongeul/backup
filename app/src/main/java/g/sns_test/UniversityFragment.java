@@ -56,6 +56,9 @@ public class UniversityFragment extends Fragment {
         mNames.add("학술분과");
 
         return view;
+
+
+
     }
 
 }
