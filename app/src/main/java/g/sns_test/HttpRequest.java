@@ -10,7 +10,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static g.sns_test.JoinActivity.IP_ADDRESS;
+import static g.sns_test.Activitiy.JoinActivity.IP_ADDRESS;
 
 /*서버로 데이터를 전송하거나 서버로부터 데이터를 가져오는 역할을 담당하는 클래드*/
 public class HttpRequest extends AsyncTask<String, Void, String> {

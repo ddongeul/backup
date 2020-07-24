@@ -20,7 +20,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static g.sns_test.JoinActivity.IP_ADDRESS;
+import static g.sns_test.Activitiy.JoinActivity.IP_ADDRESS;
 
 public class VerificationAcitvity extends AppCompatActivity {
 

@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import g.sns_test.PostItem;
+import g.sns_test.R;
+
 public class GridPostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     //뷰타입 설정

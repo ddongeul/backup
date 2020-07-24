@@ -15,6 +15,9 @@ import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 
+import g.sns_test.Activitiy.JoinActivity;
+import g.sns_test.Activitiy.MainActivity;
+
 /*
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
