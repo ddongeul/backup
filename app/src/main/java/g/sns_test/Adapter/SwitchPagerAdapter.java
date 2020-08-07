@@ -6,7 +6,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
+import g.sns_test.Fragment.PageFiveFragment;
+import g.sns_test.Fragment.PageFourFragment;
 import g.sns_test.Fragment.PageOneFragment;
+import g.sns_test.Fragment.PageSixFragment;
 import g.sns_test.Fragment.PageTwoFragment;
 import g.sns_test.Fragment.PageThreeFragment;
 
@@ -29,11 +32,11 @@ public class SwitchPagerAdapter extends FragmentPagerAdapter {
             case 2:
                 return PageThreeFragment.newInstance();
             case 3:
-                return PageThreeFragment.newInstance();
+                return PageFourFragment.newInstance();
             case 4:
-                return PageThreeFragment.newInstance();
+                return PageFiveFragment.newInstance();
             case 5:
-                return PageThreeFragment.newInstance();
+                return PageSixFragment.newInstance();
             default:
                 return null;
 

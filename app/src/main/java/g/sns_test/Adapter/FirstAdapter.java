@@ -171,7 +171,7 @@ public class FirstAdapter extends RecyclerView.Adapter<FirstAdapter.MyViewHolder
     @Override
     public int getItemCount() {
         Log.d(TAG, "getItemCount 호출");
-        return nTextViews.size();
+        return nItems.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

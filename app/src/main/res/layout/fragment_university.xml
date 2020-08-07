@@ -34,6 +34,7 @@
                     android:id="@+id/uv_picture1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/daejeon" />
 
@@ -43,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="대전대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
@@ -60,8 +61,9 @@
                     android:id="@+id/uv_picture2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/daejeon" />
+                    android:src="@drawable/hannam" />
 
                 <TextView
                     android:id="@+id/tv_list2"
@@ -69,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="한남대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
@@ -86,8 +88,9 @@
                     android:id="@+id/uv_picture3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/daejeon" />
+                    android:src="@drawable/wusong" />
 
                 <TextView
                     android:id="@+id/tv_list3"
@@ -95,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="우송대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
@@ -120,8 +123,9 @@
                     android:id="@+id/uv_picture4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/daejeon" />
+                    android:src="@drawable/baejae" />
 
                 <TextView
                     android:id="@+id/tv_list4"
@@ -129,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="배재대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
@@ -146,8 +150,9 @@
                     android:id="@+id/uv_picture5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/daejeon" />
+                    android:src="@drawable/mockwon" />
 
                 <TextView
                     android:id="@+id/tv_list5"
@@ -155,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="목원대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
@@ -172,8 +177,9 @@
                     android:id="@+id/uv_picture6"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/daejeon" />
+                    android:src="@drawable/chungnam" />
 
                 <TextView
                     android:id="@+id/tv_list6"
@@ -181,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="daejeon"
+                    android:text="충남대학교"
                     android:textSize="14dp" />
 
             </LinearLayout>
